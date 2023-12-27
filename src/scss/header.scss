@@ -1,0 +1,153 @@
+@import "color.scss";
+
+.header {
+  padding: 50px 0;
+
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 70px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%);
+    @media screen and (max-width: 1600px) {
+      padding: 28px 50px;
+    }
+  }
+
+  &__logo {
+
+  }
+
+  &__menu {
+    max-width: 942px;
+    width: 100%;
+    @media screen and (max-width: 1600px) {
+      max-width: 615px;
+    }
+  }
+
+  .menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu-item {
+
+  }
+
+  .menu-link {
+    font-size: 2rem;
+    font-weight: 500;
+    color: $dark;
+    transition: .3s;
+    @media screen and (max-width: 1600px) {
+      font-size: 1.4rem;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  .lang-block {
+    width: 77px;
+    height: 30px;
+    position: relative;
+    z-index: 100;
+    @media screen and (max-width: 1600px) {
+      width: 60px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      right: 8px;
+      transform: rotate(45deg);
+      width: 6px;
+      height: 6px;
+      border-bottom: 1px solid $purple;
+      border-right: 1px solid $purple;
+      transition: .3s;
+    }
+
+    &__select {
+      position: absolute;
+      top: -20px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 70px;
+      border-radius: 0 16px 16px 16px;
+      overflow: hidden;
+      transition: .3s;
+      @media screen and (max-width: 1600px) {
+        top: -15px;
+        height: 60px;
+      }
+    }
+
+    .lang-select {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 100%;
+      height: 70px;
+      font-size: 2rem;
+      font-weight: 500;
+      color: $dark;
+      transition: .3s;
+      @media screen and (max-width: 1600px) {
+        height: 60px;
+        font-size: 1.4rem;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 27px;
+        height: 1px;
+        background-color: $border;
+        opacity: 0;
+        transition: .3s;
+      }
+      &:hover {
+        color: $orange;
+      }
+
+      &.active {
+        order: -1;
+      }
+    }
+
+    &:hover {
+      &:after {
+        top: 15px;
+        transform: rotate(-135deg);
+      }
+
+      .lang-block__select {
+        height: 210px;
+        background-color: #FFFFFF;
+        @media screen and (max-width: 1600px) {
+          height: 180px;
+        }
+      }
+
+      .lang-select {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+}
+

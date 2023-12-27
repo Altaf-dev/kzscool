@@ -1,0 +1,93 @@
+@import "color.scss";
+@import "header.scss";
+@import "logo.scss";
+@import "main";
+@import "footer";
+
+* {
+  box-sizing: border-box;
+
+  &:after,
+  &:before {
+    transition: inherit;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html.active {
+  overflow-y: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  background-color: #0d95e8;
+  height: 5000px;
+}
+
+:root {
+  font-size: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+input,
+button {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1650px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media screen and (max-width: 1600px) {
+    max-width: 1200px;
+  }
+}
+
+
+//Точки для адаптива
+@media screen and (max-width: 1600px) {
+
+}
+@media screen and (max-width: 1400px) {
+
+}
+@media screen and (max-width: 1199px) {
+
+}
+@media screen and (max-width: 767px) {
+
+}
+@media screen and (max-width: 425px) {
+
+}
+
