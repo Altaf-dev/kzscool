@@ -17,10 +17,6 @@
     }
   }
 
-  &__logo {
-
-  }
-
   &__menu {
     max-width: 942px;
     width: 100%;
@@ -33,10 +29,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  .menu-item {
-
   }
 
   .menu-link {
@@ -148,6 +140,5 @@
       }
     }
   }
-
 }
 
